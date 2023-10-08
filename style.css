@@ -1,0 +1,69 @@
+body{
+    background-color: #111629;
+}
+
+.main-container{
+    padding-top: 15rem;
+    margin-left: 11rem;
+    margin-right: 11rem;
+}
+
+.logo{
+    color: white;
+}
+
+.form-container{
+    text-align: center;
+    outline: 2px solid #3765E2;
+    border-radius: 1rem;
+    background-color: #030617;
+}
+
+.qrform{
+    display: flex;
+}
+
+input[type=text]{
+    width: 90%;
+    background-color: transparent;
+    border: none;
+    color:white;
+    margin-left:2rem;
+    font-weight: bold;
+}
+
+input[type=text]:focus{
+    outline:none;
+}
+
+.qr-button{
+    margin: 5px;
+    padding: .8rem;
+    width: 8rem;
+    border-radius: .6rem;
+    background-color:#3762E4 ;
+    border: none;
+    color: white;
+    align-self: flex-end;
+}
+
+.qr-button:focus{
+    border-color: azure;
+}
+
+.circle-background{
+    position: absolute !important;
+    color: red;
+    width: 300rem;
+}
+
+.qrcode-container{
+    width: max-content;
+    background-color: white;
+    display: flex;
+    padding: 1rem;
+}
+
+.qrcode{
+}
+

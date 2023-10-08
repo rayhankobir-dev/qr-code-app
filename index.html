@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>QR Generator</title>
+    <script src="assets/jquery.min.js"></script>
+    <script src="assets/qrcode.js"></script>
+    <link rel="stylesheet" href="https://cdn.linearicons.com/free/1.0.0/icon-font.min.css">
+
+    <style>
+        body {
+            background-color: #111629;
+            background-image: url('./assets/img/bg-illustration.svg');
+            background-position: right;
+            background-position-y:top;
+            background-size:40rem;
+            background-repeat: no-repeat;
+        }
+
+        .nav-container {
+            display: none;
+            flex-direction: column;
+        }
+
+        .nav-container img {
+            align-self: flex-start;
+            width: 7rem;
+            margin-top:2rem;
+            margin-left:3rem;
+        }
+
+        .main-container {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 28vmin;
+        }
+
+        .logo {
+            margin-bottom: 2rem;
+        }
+
+        .form-container {
+            width: 40%;
+            text-align: center;
+            outline: 2px solid #3765E2;
+            border-radius: 1rem;
+            background-color: #030617;
+        }
+
+        .qrform {
+            display: flex;
+        }
+
+        input[type=text] {
+            width: 90%;
+            background-color: transparent;
+            border: none;
+            color: white;
+            margin-left: 2rem;
+            font-weight: bold;
+        }
+
+        input[type=text]:focus {
+            outline: none;
+        }
+
+        .qr-main-container {
+            width: 100%;
+            display: none;
+            flex-direction: column;
+            align-items: center;
+            margin-top: 10vmin;
+        }
+
+        .qr-button {
+            margin: 5px;
+            padding: .8rem;
+            width: 8rem;
+            border-radius: .6rem;
+            background-color: #3762E4;
+            border: none;
+            color: white;
+            align-self: flex-end;
+        }
+
+        .qr-button:focus {
+            border-color: azure;
+        }
+
+        .circle-background {
+            background-color: #1E2C51;
+            width: max-content;
+            padding: 2rem;
+            border-radius: 50%;
+        }
+
+        .qrcode-border {
+            width: max-content;
+            background-color: white;
+            display: flex;
+            padding: 2rem;
+            border-radius: 1rem;
+        }
+
+        .qrcode img {
+            width: 12rem;
+        }
+
+        .button-container {
+            display: none;
+            text-align: center;
+            margin-top: 10vmin
+        }
+
+        .qs-button {
+            background-color: #3762E3;
+            border: none;
+            outline: none;
+            width: 10rem;
+            padding: 1rem;
+            color: white;
+            font-weight: bold;
+            border-radius: .3rem;
+            margin-left: 1rem;
+            font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+        }
+    </style>
+</head>
+
+<body>
+
+    <nav>
+        <div class="nav-container" id="nav-container">
+            <img src="assets/img/logo-qr-generator.svg" alt="" >
+        </div>
+    </nav>
+
+
+    <div class="main-container" id="main-container">
+        <div class="logo">
+            <img src="assets/img/logo-qr-generator.svg" alt="">
+        </div>
+        <div class="form-container">
+            <div class="qrform">
+                <input type="text" name="qrInput" id="qrInput" placeholder="Enter an URL">
+                <button class="qr-button" id="qr-button">QR code</button>
+            </div>
+        </div>
+    </div>
+
+    <div class="qr-main-container" id="qr-main-container">
+        <div class="circle-background">
+            <div class="qrcode-border">
+                <div id="qrcode" class="qrcode"></div>
+            </div>
+        </div>
+    </div>
+
+    <div class="button-container" id="button-container">
+        <button class="qs-button" id="d-button">Download <span class="lnr lnr-arrow-down"></span></button>
+        <button class="qs-button" id="s-button">Share <span class="lnr lnr-link"></span></button>
+    </div>
+
+</body>
+
+<!-- <script type="text/javascript">
+    new QRCode(document.getElementById("qrcode"), "http://christian-dev.tech/");
+</script> -->
+
+</div>
+<script src="assets/main.js"></script>
+
+</html>
